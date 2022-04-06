@@ -23,6 +23,7 @@ class HomeController extends Controller
             ->registerModel(Company::class, 'name')
             ->registerModel(Category::class, 'name')
             ->perform($request->input('query'));
+            // dd($searchResults, true);
 
         return view('search', compact('searchResults'));
     }
